@@ -11,11 +11,9 @@
   "bar_no",
   "item_code",
   "warehouse",
-  "weight",
   "column_break_hobp",
   "status",
-  "item_name",
-  "item_description"
+  "weight"
  ],
  "fields": [
   {
@@ -28,7 +26,7 @@
    "fieldname": "item_code",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Item Code",
+   "label": "Item Name",
    "options": "Item"
   },
   {
@@ -43,19 +41,6 @@
    "options": "\nActive\nInactive\nDelivered"
   },
   {
-   "fetch_from": "item_code.item_name",
-   "fieldname": "item_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Item Name"
-  },
-  {
-   "fetch_from": "item_code.description",
-   "fieldname": "item_description",
-   "fieldtype": "Text",
-   "label": "Item Description"
-  },
-  {
    "fieldname": "weight",
    "fieldtype": "Float",
    "in_list_view": 1,
@@ -64,7 +49,8 @@
   {
    "fieldname": "warehouse",
    "fieldtype": "Link",
-   "label": "Warehouse",
+   "in_list_view": 1,
+   "label": "Location",
    "options": "Warehouse"
   },
   {
@@ -81,7 +67,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-20 11:06:03.506118",
+ "modified": "2024-09-20 19:28:56.023996",
  "modified_by": "Administrator",
  "module": "Amarapali",
  "name": "Bar Numbers",
