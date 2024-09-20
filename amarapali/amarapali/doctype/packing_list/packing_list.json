@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-09-19 11:52:28.626046",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "inout_ward",
+  "doctype_list",
+  "column_break_icir",
+  "naming_series",
+  "document",
+  "section_break_zeua",
+  "column_break_igwk",
+  "purchase_items",
+  "delivered_items",
+  "amended_from",
+  "section_break_citl",
+  "total_bar_weight",
+  "total_bars",
+  "column_break_mokd",
+  "total_bar_weight_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "inout_ward",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "In/Out Ward",
+   "options": "\nIn Ward\nOut Ward",
+   "reqd": 1
+  },
+  {
+   "fieldname": "doctype_list",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Doctype",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "document",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Document",
+   "options": "doctype_list"
+  },
+  {
+   "fieldname": "column_break_icir",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "\nPR-PAC-.YYYY.-\nDN-PAC-.YYYY.-"
+  },
+  {
+   "fieldname": "section_break_zeua",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_bar_weight",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Total Quantity",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Packing List",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "depends_on": "eval:doc.doctype_list == \"Purchase Receipt\" ",
+   "fieldname": "purchase_items",
+   "fieldtype": "Table",
+   "label": "Purchase Items",
+   "options": "Packing Purchase Items"
+  },
+  {
+   "depends_on": "eval:doc.doctype_list == \"Delivery Note\" ",
+   "fieldname": "delivered_items",
+   "fieldtype": "Table",
+   "label": "Delivered Items",
+   "options": "Packing Delivery Items"
+  },
+  {
+   "depends_on": "eval:doc.document_list == \"Delivery Note\" ",
+   "fieldname": "column_break_igwk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_citl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_mokd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.document",
+   "fieldname": "total_bar_weight_from",
+   "fieldtype": "Data",
+   "label": "Total Quantity From",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_bars",
+   "fieldtype": "Data",
+   "label": "Total Bars",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-09-20 16:22:04.946385",
+ "modified_by": "Administrator",
+ "module": "Amarapali",
+ "name": "Packing List",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
