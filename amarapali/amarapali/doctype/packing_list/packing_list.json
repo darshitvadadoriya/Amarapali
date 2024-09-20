@@ -64,7 +64,7 @@
    "fieldname": "total_bar_weight",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Total Quantity",
+   "label": "Total Weight",
    "read_only": 1
   },
   {
@@ -121,7 +121,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-20 16:22:04.946385",
+ "modified": "2024-09-20 19:13:20.153539",
  "modified_by": "Administrator",
  "module": "Amarapali",
  "name": "Packing List",

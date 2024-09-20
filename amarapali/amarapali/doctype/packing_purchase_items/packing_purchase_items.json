@@ -37,7 +37,7 @@
    "fieldname": "net_weight",
    "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "Quantity"
+   "label": "Weight"
   },
   {
    "fieldname": "uom",
@@ -63,7 +63,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-09-20 18:08:02.896230",
+ "modified": "2024-09-20 19:13:46.393973",
  "modified_by": "Administrator",
  "module": "Amarapali",
  "name": "Packing Purchase Items",
