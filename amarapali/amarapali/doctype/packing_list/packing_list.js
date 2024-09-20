@@ -77,7 +77,6 @@ frappe.ui.form.on("Packing List", {
                     // add record automatic in child table
                     frm.add_child(child_table, {
                         item_code: data.item_code,
-                        item_name: data.item_name,
                         warehouse: data.warehouse,
                         uom: data.uom
                     });

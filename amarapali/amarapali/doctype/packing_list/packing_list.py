@@ -79,7 +79,6 @@ class PackingList(Document):
                     doc = bar_number_data(data.bar_no)
                     if doc.status == "Active":
                         data.item_code = doc.item_code
-                        data.item_name = doc.item_name
                         data.net_weight = doc.weight
                         data.warehouse = doc.warehouse
                     else:
